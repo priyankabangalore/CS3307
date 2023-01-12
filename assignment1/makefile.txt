@@ -1,0 +1,9 @@
+app1: generator
+
+generator: generator.cpp logger.cpp logger.h log_message.cpp log_message.h
+	g++ generator.cpp logger.cpp log_message.cpp -lsqlite3 -o generator
+
+app2: dumper
+
+dumper: dumper.cpp logger.cpp logger.h log_message.cpp log_message.h
+	g++ dumper.cpp logger.cpp log_message.cpp -lsqlite3 -o dumper
